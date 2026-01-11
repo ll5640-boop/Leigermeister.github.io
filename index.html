@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header role="banner" class="container">
+      <div class="nav">
+        <h1 style="margin:0;">Welcome to My Portfolio</h1>
+        <button class="nav-toggle" aria-controls="nav-links" aria-expanded="false" aria-label="Toggle navigation">
+          <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"></path></svg>
+        </button>
+        <nav role="navigation" aria-label="Primary" class="nav-links-wrap">
+          <ul id="nav-links" class="nav-links">
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main" role="main" class="container">
+
+      <section aria-label="About">
+        <div class="about">
+          <div class="avatar" aria-hidden="false">
+            <img src="https://via.placeholder.com/160" alt="Portrait of Your Name">
+          </div>
+          <div class="bio">
+            <h2>About Me</h2>
+            <p>Hello! I'm a web developer with a passion for creating beautiful and functional websites. I focus on accessible, responsive design and enjoy learning new tools and frameworks.</p>
+            <p class="sr-only">Skills list follows.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" role="region" aria-label="Projects">
+        <h3>View my projects below!</h3>
+        <article class="card project-card" role="article" aria-labelledby="proj-1-title">
+          <h4 id="proj-1-title">Project 1: Personal Blog</h4>
+          <p>A blog where I share my thoughts on web development and programming.</p>
+          <figure>
+            <img src="blog-screenshot.png" alt="Screenshot of Personal Blog">
+            <figcaption>Screenshot of my personal blog homepage.</figcaption>
+          </figure>
+        </article>
+      </section>
+
+      <section id="skills" aria-label="Skills">
+        <h4>My skills include:</h4>
+        <ul class="skills-list" aria-label="Skills list">
+          <li>
+            <svg class="skill-icon" viewBox="0 0 36 36" aria-hidden="true" focusable="false">
+              <circle cx="18" cy="18" r="16"></circle>
+              <text x="18" y="20">H</text>
+            </svg>
+            <span>HTML</span>
+          </li>
+          <li>
+            <svg class="skill-icon" viewBox="0 0 36 36" aria-hidden="true" focusable="false">
+              <circle cx="18" cy="18" r="16"></circle>
+              <text x="18" y="20">C</text>
+            </svg>
+            <span>CSS</span>
+          </li>
+          <li>
+            <svg class="skill-icon" viewBox="0 0 36 36" aria-hidden="true" focusable="false">
+              <circle cx="18" cy="18" r="16"></circle>
+              <text x="18" y="20">J</text>
+            </svg>
+            <span>JavaScript</span>
+          </li>
+          <li>
+            <svg class="skill-icon" viewBox="0 0 36 36" aria-hidden="true" focusable="false">
+              <circle cx="18" cy="18" r="16"></circle>
+              <text x="18" y="20">R</text>
+            </svg>
+            <span>React</span>
+          </li>
+          <li>
+            <svg class="skill-icon" viewBox="0 0 36 36" aria-hidden="true" focusable="false">
+              <circle cx="18" cy="18" r="16"></circle>
+              <text x="18" y="20">N</text>
+            </svg>
+            <span>Node.js</span>
+          </li>
+        </ul>
+      </section>
+
+      <section id="contact" aria-label="Contact">
+        <h5>Contact Me</h5>
+        <form id="contactForm" novalidate>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required aria-describedby="nameError">
+          <span class="error-message" id="nameError" aria-live="polite"></span>
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required aria-describedby="emailError">
+          <span class="error-message" id="emailError" aria-live="polite"></span>
+
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" required aria-describedby="messageError"></textarea>
+          <span class="error-message" id="messageError" aria-live="polite"></span>
+
+          <button type="submit" class="btn">Send</button>
+          <div id="formSuccess" class="form-success" role="status" aria-live="polite" style="display:none;">Thanks — your message has been sent.</div>
+        </form>
+      </section>
+
+    </main>
+
+    <footer role="contentinfo" class="container">
+      <p>© 2026 — Your Name</p>
+    </footer>
+  </body>
+</html>
